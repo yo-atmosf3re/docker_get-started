@@ -60,14 +60,16 @@ function TodoListCard() {
                     </React.Fragment>
                 )
             }
-            {items.map(item => (
-                <ItemDisplay
-                    item={item}
-                    key={item.id}
-                    onItemUpdate={onItemUpdate}
-                    onItemRemoval={onItemRemoval}
-                />
-            ))}
+            {
+                items.map(item => (
+                    <ItemDisplay
+                        item={item}
+                        key={item.id}
+                        onItemUpdate={onItemUpdate}
+                        onItemRemoval={onItemRemoval}
+                    />
+                ))
+            }
         </React.Fragment>
     );
 }
